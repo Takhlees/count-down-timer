@@ -79,15 +79,21 @@ function App() {
       <div className='inputs'>
         <div className='in'>
          <h6>Hours</h6>
-        <input type="number" min="0" max="99" value={formatValue(hours)} onChange={(e)=> setHours(parseInt(e.target.value , 10))}  onKeyDown={(e) => e.preventDefault()}/> :
+         <div className='ic'>
+        <input type="number" min="0" max="99" value={formatValue(hours)} onChange={(e)=> setHours(parseInt(e.target.value , 10))}  onKeyDown={(e) => e.preventDefault()}/> <p>:</p>
+        </div>
         </div>
         <div className='in'>  
         <h6>Minutes</h6>
-        <input type="number" min="0" max="59" value={formatValue(minutes)} onChange={(e)=> setMinutes(parseInt(e.target.value , 10))}  onKeyDown={(e) => e.preventDefault()}/> :
+        <div className='ic'>
+        <input type="number" min="0" max="59" value={formatValue(minutes)} onChange={(e)=> setMinutes(parseInt(e.target.value , 10))}  onKeyDown={(e) => e.preventDefault()}/> <p>:</p>
+       </div>
        </div>
        <div className='in'>        
         <h6>Seconds</h6>
+        <div className='ic'>
         <input type="number" min="0" max="59" value={formatValue(seconds)} onChange={(e)=> setSeconds(parseInt(e.target.value , 10))}  onKeyDown={(e) => e.preventDefault()}/>
+    </div>
     </div>
   </div>
 
